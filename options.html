@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Settings page for AI Forms Filler Chrome extension">
+  <title>AI Forms Filler - Settings</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>AI Forms Filler Settings</h1>
+      <p>Configure your Hugging Face API key to enable AI-powered form filling</p>
+    </header>
+    
+    <section class="info-section">
+      <h2>Setup Instructions</h2>
+      <ol>
+        <li>Go to <a href="https://huggingface.co/join" target="_blank" rel="noopener noreferrer">huggingface.co</a> and create a free account</li>
+        <li>Navigate to <a href="https://huggingface.co/settings/tokens" target="_blank" rel="noopener noreferrer">Settings → Access Tokens</a></li>
+        <li>Create a new token with <strong>"Read"</strong> permissions</li>
+        <li>Copy the token (starts with <code>hf_</code>) and paste it below</li>
+      </ol>
+    </section>
+
+    <section class="form-section">
+      <div class="form-group">
+        <label for="apiKey">Hugging Face API Key:</label>
+        <input type="text" id="apiKey" placeholder="hf_xxxxxxxxxxxxxxxxxxxxxxxxx" aria-describedby="apiKeyHelp">
+        <small id="apiKeyHelp">Your API key is stored locally and never shared</small>
+      </div>
+
+      <button id="saveBtn" class="save-button">Save Settings</button>
+      <div id="status" class="status" role="status" aria-live="polite"></div>
+    </section>
+
+    <section class="help-section">
+      <h2>Troubleshooting</h2>
+      <ul>
+        <li>Ensure you're on a Google Forms page before using the extension</li>
+        <li>The extension works only with multiple choice questions</li>
+        <li>Free API accounts have rate limits (~1000 requests/hour)</li>
+        <li>Make sure to copy the complete API key including the "hf_" prefix</li>
+      </ul>
+    </section>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AI-powered Google Forms filler extension">
+  <title>AI Forms Filler</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h3>AI Forms Filler</h3>
+    <p>Uses AI to find correct answers for MCQ questions</p>
+    
+    <div id="apiStatus" class="api-status"></div>
+    
+    <button id="fillButton" class="fill-btn">Fill with AI</button>
+    <button id="optionsButton" class="options-btn">Settings</button>
+    
+    <div id="status" class="status"></div>
+    <div id="progress" class="progress-container">
+      <div class="progress-bar">
+        <div id="progressFill" class="progress-fill"></div>
+      </div>
+      <span id="progressText">0/0</span>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
